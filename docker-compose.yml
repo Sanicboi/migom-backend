@@ -1,0 +1,17 @@
+version: '3'
+services:
+  web:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - BASE_URL=95.163.240.236
+  postgres:
+    image: "postgres:14.5"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: "test"
+      POSTGRES_PASSWORD: "test"
+      POSTGRES_DB: "test"
+
